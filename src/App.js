@@ -5,7 +5,7 @@ function App() {
   const iframeRef = useRef(null);
   return (
     <Draggable
-        axis="both" // Allow dragging in both x and y directions
+        axis="both"
         handle=".draggable-handle"
       >
     <div ref={iframeRef}>
@@ -13,9 +13,9 @@ function App() {
         <iframe
           
           className="draggable-handle"
-          src="http://localhost:5173/" // Replace with your desired iframe URL
+          src="https://example.com" 
           title="Draggable Iframe"
-          style={{border: "2px solid black"}}
+          style={{border: "10px solid black"}}
         />
       
     </div>
