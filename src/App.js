@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from 'react';
+import Draggable from 'react-draggable';
 
 function App() {
+  const iframeRef = useRef(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Draggable
+        axis="both" // Allow dragging in both x and y directions
+        handle=".draggable-handle"
+      >
+    <div ref={iframeRef}>
+      
+        <iframe
+          
+          className="draggable-handle"
+          src="http://localhost:5173/" // Replace with your desired iframe URL
+          title="Draggable Iframe"
+          style={{border: "2px solid black"}}
+        />
+      
     </div>
+    </Draggable>
   );
 }
 
